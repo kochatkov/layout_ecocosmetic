@@ -1,0 +1,22 @@
+.aside {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(52, 79, 16, 0.5);
+  font-size: 14px;
+  line-height: 130%; }
+  @media screen and (max-width: 865px) {
+    .aside {
+      display: none; } }
+  .aside:after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -108px;
+    background: rgba(52, 79, 16, 0.5);
+    height: 1px;
+    width: 100px; }
+
+/*# sourceMappingURL=aside.css.map */

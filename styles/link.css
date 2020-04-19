@@ -1,0 +1,22 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #344f10;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  .link::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -3px;
+    background: rgba(52, 79, 16, 0.5);
+    height: 1px;
+    width: 100px; }
+  .link:hover {
+    color: rgba(52, 79, 16, 0.5); }
+
+/*# sourceMappingURL=link.css.map */

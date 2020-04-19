@@ -1,0 +1,22 @@
+.section {
+  padding: 50px;
+  position: relative; }
+  @media screen and (max-width: 1372px) {
+    .section {
+      padding: 20px; } }
+  .section:nth-child(2) {
+    padding-top: 90px;
+    position: relative; }
+  .section:nth-child(3) {
+    padding-top: 200px;
+    padding-bottom: 20px; }
+    @media screen and (max-width: 1372px) {
+      .section:nth-child(3) {
+        padding: 60px 20px; } }
+  .section:nth-child(4) {
+    padding-left: 170px; }
+    @media screen and (max-width: 1372px) {
+      .section:nth-child(4) {
+        padding: 60px 20px; } }
+
+/*# sourceMappingURL=section.css.map */
