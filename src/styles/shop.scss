@@ -1,0 +1,146 @@
+@import "utils";
+
+.shop {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: $big-breakpoint) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    @include article;
+    @media screen and (max-width: $breakpoint) {
+      text-align: center;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    padding: 0;
+    @media screen and (max-width: $breakpoint) {
+      margin: 0 auto;
+    }
+  }
+
+  &__nav-item {
+    list-style: none;
+    margin: 0 10px 0 0;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #828282;
+    padding: 8px 15px 8px 0;
+    transition: $hover-duration;
+    &:hover {
+      color: $blackcolor;
+    }
+    @media screen and (max-width: $breakpoint) {
+      font-size: 14px;
+    }
+  }
+
+  &__nav-active {
+    color: $blackcolor;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      width: 50px;
+      height: 3px;
+      background-color: $blackcolor;
+    }
+  }
+
+  &__products {
+    margin-top: 80px;
+    display: flex;
+    width: 1130px;
+    overflow: hidden;
+    @media screen and (max-width: $big-breakpoint) {
+      width: 300px;
+      overflow: visible;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    width: 380px;
+    box-sizing: border-box;
+    margin-right: 25px;
+    @media screen and (max-width: $breakpoint) {
+      width: 300px;
+      height: 320px;
+    }
+  }
+  &__card:last-child {
+    @media screen and (max-width: 1450px) {
+      display: none;
+    }
+  }
+  &__card:nth-child(2),
+  &__card:last-child {
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__img {
+    transition: $hover-duration;
+    @media screen and (max-width: $breakpoint) {
+      height: 267px;
+      width: 300px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__card-text {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $blackcolor;
+    @media screen and (max-width: $breakpoint) {
+      text-align: center;
+      margin: 5px;
+    }
+  }
+
+  &__card-price {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @media screen and (max-width: $breakpoint) {
+      text-align: center;
+      margin: 5px;
+    }
+  }
+
+  &__arrows {
+    margin-top: 40px;
+    @media screen and (max-width: $breakpoint) {
+      margin: 10px auto;
+    }
+  }
+
+  &__arrow-left {
+    margin-right: 25px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

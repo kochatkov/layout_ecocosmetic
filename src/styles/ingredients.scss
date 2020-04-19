@@ -1,0 +1,87 @@
+@import "utils";
+@import "variable";
+
+.ingredients {
+  position: relative;
+  display: grid;
+  grid-template-columns: 300px 700px;
+  grid-template-rows: 1fr 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 50px auto 150px;
+  @media screen and (max-width: $big-breakpoint) {
+    width: 100%;
+  }
+  @media screen and (max-width: $breakpoint) {
+    grid-template-columns: 1fr;
+  }
+
+  &__aside {
+    left: -58px;
+    top: 125px;
+  }
+
+  &__heading {
+    @include article;
+    margin: 30px 0 190px;
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    justify-items: end;
+    transform: translateY(15px);
+    @media screen and (max-width: $big-breakpoint) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__vector {
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      overflow: hidden;
+    }
+    @media screen and (max-width: $breakpoint) {
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media screen and (max-width: $breakpoint) {
+      transform: translateX(-75px);
+    }
+  }
+
+  &__item {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -95px;
+      background: $blackcolor;
+      width: 76px;
+      height: 1px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: $blackcolor;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      right: -97px;
+      top: 10px;
+      @media screen and (max-width: $breakpoint) {
+        display: none;
+      }
+    }
+  }
+}

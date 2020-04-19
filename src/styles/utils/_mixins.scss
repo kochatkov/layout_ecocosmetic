@@ -1,6 +1,19 @@
+@import "variable";
+
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} 0.3s;
   &:hover {
     #{$_property}: $_toValue;
+  }
+}
+
+@mixin article {
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $greencolor;
+  @media screen and (max-width: $big-breakpoint) {
+    font-size: 24px;
   }
 }

@@ -1,0 +1,66 @@
+@import "variable";
+@import "utils";
+
+.creators {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: $big-breakpoint) {
+    width: 100%;
+  }
+  @media screen and (max-width: $breakpoint) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    width: 380px;
+    margin-right: 80px;
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    @include article;
+  }
+
+  &__paragraph {
+    margin-bottom: 25px;
+  }
+  &__paragraph:nth-child(3) {
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    margin-bottom: 100px;
+    @media screen and (max-width: $breakpoint) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__aside {
+    left: -114px;
+    top: 125px;
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__photo {
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: $breakpoint) {
+      margin: 0 auto;
+    }
+  }
+}
