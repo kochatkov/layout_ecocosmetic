@@ -3,7 +3,7 @@
   margin: 0 auto; }
   @media screen and (max-width: 1372px) {
     .shop {
-      width: 100%;
+      max-width: 818px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -14,13 +14,16 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media screen and (max-width: 865px) {
+    .shop {
+      max-width: 600px; } }
   .shop__heading {
     font-size: 36px;
     line-height: 150%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #344f10; }
-    @media screen and (max-width: 1372px) {
+    @media screen and (max-width: 865px) {
       .shop__heading {
         font-size: 24px; } }
     @media screen and (max-width: 865px) {
@@ -67,15 +70,17 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1130px;
-    overflow: hidden; }
+    max-width: 1130px;
+    overflow: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media screen and (max-width: 1372px) {
       .shop__products {
-        width: 300px;
+        width: 105%;
         overflow: visible;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
   .shop__card {
     width: 380px;
     -webkit-box-sizing: border-box;
@@ -84,14 +89,22 @@
     @media screen and (max-width: 865px) {
       .shop__card {
         width: 300px;
-        height: 320px; } }
+        height: 320px;
+        margin-right: 0; } }
   @media screen and (max-width: 1450px) {
     .shop__card:last-child {
       display: none; } }
   @media screen and (max-width: 865px) {
-    .shop__card:nth-child(2), .shop__card:last-child {
+    .shop__card:last-child {
+      display: none; } }
+  @media screen and (max-width: 706px) {
+    .shop__card:nth-child(2) {
       display: none; } }
   .shop__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
     @media screen and (max-width: 865px) {
@@ -122,10 +135,15 @@
         text-align: center;
         margin: 5px; } }
   .shop__arrows {
-    margin-top: 40px; }
+    margin-top: 40px;
+    margin-right: auto; }
     @media screen and (max-width: 865px) {
       .shop__arrows {
-        margin: 10px auto; } }
+        margin-right: 0;
+        margin-left: auto; } }
+    @media screen and (max-width: 706px) {
+      .shop__arrows {
+        margin: 30px auto 5px; } }
   .shop__arrow-left {
     margin-right: 25px; }
   .shop__button {

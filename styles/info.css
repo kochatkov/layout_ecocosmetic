@@ -65,13 +65,18 @@
     @media screen and (max-width: 865px) {
       .info__photo-link {
         margin: 0 auto 20px;
-        width: 100%;
+        width: 100%; } }
+    @media screen and (max-width: 510px) {
+      .info__photo-link {
         height: 267px; } }
   .info__cans {
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
+    @media screen and (max-width: 865px) {
+      .info__cans {
+        width: 100%; } }
     .info__cans:hover {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }

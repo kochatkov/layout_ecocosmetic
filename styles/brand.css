@@ -6,24 +6,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  width: 1200px;
+  max-width: 1100px;
   margin: 0 auto; }
-  @media screen and (max-width: 1372px) {
-    .brand {
-      width: 800px; } }
-  @media screen and (max-width: 865px) {
-    .brand {
-      width: 100%; } }
-  .brand:after {
-    content: "";
-    position: absolute;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    top: 270px;
-    left: -80px;
-    background: rgba(52, 79, 16, 0.5);
-    height: 1px;
-    width: 100px; }
   .brand__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -49,7 +33,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #344f10; }
-    @media screen and (max-width: 1372px) {
+    @media screen and (max-width: 865px) {
       .brand__article {
         font-size: 24px; } }
     @media screen and (max-width: 865px) {
@@ -64,13 +48,15 @@
     overflow: hidden;
     width: 500px;
     height: 529px;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px); }
-    @media screen and (max-width: 1372px) {
-      .brand__photo {
-        width: 400px;
-        height: 400px; } }
+    -webkit-transform: translateX(-108px);
+            transform: translateX(-108px); }
     @media screen and (max-width: 865px) {
+      .brand__photo {
+        width: 40vw;
+        height: 40vw;
+        -webkit-transform: translateX(0);
+                transform: translateX(0); } }
+    @media screen and (max-width: 660px) {
       .brand__photo {
         display: none; } }
   .brand__photo-little {
