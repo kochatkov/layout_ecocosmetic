@@ -48,6 +48,7 @@
       text-align: center;
     }
   }
+
   &__photo-link {
     overflow: hidden;
     width: 577px;
@@ -55,6 +56,9 @@
     @media screen and (max-width: $breakpoint) {
       margin: 0 auto 20px;
       width: 100%;
+    }
+
+    @media screen and (max-width: $small-breakpoint) {
       height: 267px;
     }
   }
@@ -62,10 +66,15 @@
   &__cans {
     object-fit: cover;
     transition: $hover-duration;
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+    }
+
     &:hover {
       transform: scale(1.1);
     }
   }
+
   &__button {
     @media screen and (max-width: $breakpoint) {
       margin: 0 auto;

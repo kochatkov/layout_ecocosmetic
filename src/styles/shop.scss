@@ -4,10 +4,13 @@
   max-width: 1200px;
   margin: 0 auto;
   @media screen and (max-width: $big-breakpoint) {
-    width: 100%;
+    max-width: 818px;
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  @media screen and (max-width: $breakpoint) {
+    max-width: 600px;
   }
 
   &__heading {
@@ -39,9 +42,11 @@
     color: #828282;
     padding: 8px 15px 8px 0;
     transition: $hover-duration;
+
     &:hover {
       color: $blackcolor;
     }
+
     @media screen and (max-width: $breakpoint) {
       font-size: 14px;
     }
@@ -50,6 +55,7 @@
   &__nav-active {
     color: $blackcolor;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -63,12 +69,13 @@
   &__products {
     margin-top: 80px;
     display: flex;
-    width: 1130px;
+    max-width: 1130px;
     overflow: hidden;
+    justify-content: center;
     @media screen and (max-width: $big-breakpoint) {
-      width: 300px;
+      width: 105%;
       overflow: visible;
-      justify-content: center;
+      justify-content: space-around;
     }
   }
 
@@ -79,26 +86,34 @@
     @media screen and (max-width: $breakpoint) {
       width: 300px;
       height: 320px;
+      margin-right: 0;
     }
   }
+
   &__card:last-child {
     @media screen and (max-width: 1450px) {
       display: none;
     }
-  }
-  &__card:nth-child(2),
-  &__card:last-child {
     @media screen and (max-width: $breakpoint) {
       display: none;
     }
   }
 
+  &__card:nth-child(2) {
+    @media screen and (max-width: 706px) {
+      display: none;
+    }
+  }
+
   &__img {
+    object-fit: cover;
+    object-position: center;
     transition: $hover-duration;
     @media screen and (max-width: $breakpoint) {
       height: 267px;
       width: 300px;
     }
+
     &:hover {
       transform: scale(1.05);
     }
@@ -130,8 +145,13 @@
 
   &__arrows {
     margin-top: 40px;
+    margin-right: auto;
     @media screen and (max-width: $breakpoint) {
-      margin: 10px auto;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 706px) {
+      margin: 30px auto 5px;
     }
   }
 

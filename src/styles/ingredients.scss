@@ -4,26 +4,39 @@
 .ingredients {
   position: relative;
   display: grid;
-  grid-template-columns: 300px 700px;
+  grid-template-columns: 1fr auto;
   grid-template-rows: 1fr 20px;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 50px auto 150px;
   @media screen and (max-width: $big-breakpoint) {
     width: 100%;
   }
+
   @media screen and (max-width: $breakpoint) {
-    grid-template-columns: 1fr;
+    width: 100%;
+    margin-bottom: 30px;
   }
 
   &__aside {
-    left: -58px;
+    left: -130px;
     top: 125px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__heading {
     @include article;
-    margin: 30px 0 190px;
+    margin: 50px 0 0;
+
+    @media screen and (max-width: $small-breakpoint) {
+      margin: -80px 0 0;
+      width: 16vw;
+    }
   }
 
   &__description {
@@ -31,10 +44,8 @@
     grid-template-columns: 200px 1fr;
     justify-items: end;
     transform: translateY(15px);
-    @media screen and (max-width: $big-breakpoint) {
-      position: absolute;
-      top: 0;
-      right: 0;
+    @media screen and (max-width: $small-breakpoint) {
+      transform: translateX(-20px);
     }
   }
 
@@ -46,6 +57,16 @@
     @media screen and (max-width: $breakpoint) {
       overflow: hidden;
     }
+
+    @media screen and (max-width: $breakpoint) {
+      padding-right: 2vw;
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: $small-breakpoint) {
+      margin: 0 0 -61px;
+    }
   }
 
   &__list {
@@ -53,14 +74,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transform: translate(-170px, 0);
+    width: 20vw;
 
-    @media screen and (max-width: $breakpoint) {
-      transform: translateX(-75px);
+    @media screen and (max-width: $breakpoint-middle) {
+      transform: translate(-80px, 0);
     }
   }
 
   &__item {
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -70,6 +94,7 @@
       width: 76px;
       height: 1px;
     }
+
     &::before {
       content: "";
       position: absolute;

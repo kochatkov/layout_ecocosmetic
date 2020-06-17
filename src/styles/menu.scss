@@ -1,0 +1,95 @@
+@import "variable";
+
+.menu {
+  position: absolute;
+  top: -900px;
+  width: 100%;
+  height: 850px;
+  z-index: 2;
+  background: $blackcolor;
+  transition: 1s;
+  @media screen and (max-width: $one-picture-breakpoint) {
+    height: 700px;
+  }
+
+  &__show {
+    top: 0;
+  }
+
+  &__close {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: $menu-color;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    left: 25px;
+  }
+
+  &__stick {
+    position: relative;
+  }
+
+  &__underline {
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background: #e4dfd3;
+    opacity: 0.5;
+    top: 112px;
+    left: 50%;
+    transform: translate(-50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #e4dfd3;
+      opacity: 0.7;
+      top: 95px;
+      left: 0;
+
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #e4dfd3;
+      opacity: 0.7;
+      top: 189px;
+      left: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    justify-content: space-evenly;
+    @media screen and (max-width: $one-picture-breakpoint) {
+      height: 50%;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 130%;
+    outline: none;
+    text-decoration: none;
+    color: $menu-color;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

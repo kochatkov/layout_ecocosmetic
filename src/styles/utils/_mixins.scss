@@ -13,7 +13,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $greencolor;
-  @media screen and (max-width: $big-breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     font-size: 24px;
   }
 }

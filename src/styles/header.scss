@@ -9,10 +9,41 @@
     justify-content: space-between;
     width: 1200px;
     margin: 0 auto;
+    height: 100px;
+    @media screen and (max-width: $breakpoint) {
+      align-items: center;
+      height: 60px;
+    }
+  }
+
+  &__menu {
+    background-image: url("../images/menu.png");
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 13px;
+    @media screen and (min-width: $breakpoint) {
+      display: none;
+    }
   }
 
   &__nav {
     display: flex;
+    align-items: center;
+  }
+
+  &__nav-menu {
+    background-image: url("../images/Group 6.1.svg");
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $greencolor;
+    border-radius: 50%;
+    @media screen and (min-width: $breakpoint) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -27,6 +58,10 @@
     color: $greencolor;
     font-size: 14px;
     line-height: 130%;
+    display: none;
+    @media screen and (min-width: $breakpoint) {
+      display: block;
+    }
   }
 
   &__img {
@@ -37,5 +72,9 @@
     object-position: center;
     object-fit: scale-down;
     flex-shrink: 0;
+    display: none;
+    @media screen and (min-width: $breakpoint) {
+      display: block;
+    }
   }
 }

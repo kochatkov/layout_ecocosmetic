@@ -1,20 +1,23 @@
 @import "utils";
+@import "variable";
 
 .contact {
   position: relative;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  @media screen and (max-width: $breakpoint) {
-    width: 100%;
-    flex-direction: column;
+  @media screen and (max-width: $one-picture-breakpoint) {
     align-items: center;
   }
+
   &__form {
     display: flex;
     flex-direction: column;
     margin-right: 50px;
+    @media screen and (max-width: $breakpoint) {
+      margin-right: 0;
+    }
   }
 
   &__aside {
@@ -32,7 +35,14 @@
     line-height: 150%;
     @media screen and (max-width: $big-breakpoint) {
       font-size: 16px;
-      margin: 0;
+
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 500px) {
+      width: 60vw;
+      margin: auto;
     }
   }
 
@@ -44,6 +54,7 @@
     outline: none;
     border: none;
     border-bottom: 1px solid #bdbdbd;
+
     &:focus {
       border-bottom: 1px solid $greencolor;
     }
@@ -57,10 +68,15 @@
       width: 280px;
       height: 40px;
     }
+
+    @media screen and (max-width: 500px) {
+      width: 70vw;
+      margin: 10px auto;
+    }
   }
 
   &__input-textarea {
-    margin: 30px 0;
+    padding: 30px 0;
   }
 
   &__photo {
@@ -71,7 +87,7 @@
       width: 368px;
       height: 409px;
     }
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: $one-picture-breakpoint) {
       display: none;
     }
   }
@@ -86,4 +102,19 @@
       height: 409px;
     }
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid gray;
+  -webkit-text-fill-color: gray;
+  -webkit-box-shadow: 0 0 0 1000px #e4dfd3 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

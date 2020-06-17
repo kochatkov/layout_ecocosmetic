@@ -2,12 +2,14 @@
 
 .nav {
   display: flex;
-  
 
   &__list {
     list-style: none;
-    display: flex;
-    
+    display: none;
+    @media screen and (min-width: $breakpoint) {
+      display: flex;
+    }
+
   }
 
   &__item {

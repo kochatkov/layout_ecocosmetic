@@ -5,24 +5,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  @media screen and (max-width: $big-breakpoint) {
-    width: 800px;
-  }
-  @media screen and (max-width: $breakpoint) {
-    width: 100%;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    transform: rotate(90deg);
-    top: 270px;
-    left: -80px;
-    background: rgba(52, 79, 16, 0.5);
-    height: 1px;
-    width: 100px;
-  }
 
   &__text {
     display: flex;
@@ -57,12 +41,14 @@
     overflow: hidden;
     width: 500px;
     height: 529px;
-    transform: translateX(-60px);
-    @media screen and (max-width: $big-breakpoint) {
-      width: 400px;
-      height: 400px;
-    }
+    transform: translateX(-108px);
     @media screen and (max-width: $breakpoint) {
+      width: 40vw;
+      height: 40vw;
+      transform: translateX(0);
+
+    }
+    @media screen and (max-width: $one-picture-breakpoint) {
       display: none;
     }
   }
