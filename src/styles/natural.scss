@@ -1,0 +1,29 @@
+@import "variable";
+
+.natural {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  justify-content: center;
+  justify-items: center;
+  align-items: baseline;
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint) {
+    grid-template-columns: 200px;
+    grid-gap: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

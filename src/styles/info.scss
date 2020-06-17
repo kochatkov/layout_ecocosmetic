@@ -1,0 +1,83 @@
+@import "variable";
+
+.info {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: $big-breakpoint) {
+    width: 800px;
+  }
+  @media screen and (max-width: $breakpoint) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 480px;
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__description-head {
+    font-size: 60px;
+    line-height: 72px;
+    color: $blackcolor;
+    @media screen and (max-width: $big-breakpoint) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: $breakpoint) {
+      text-align: center;
+    }
+  }
+
+  &__description-text {
+    color: $blackcolor;
+    font-size: 22px;
+    line-height: 130%;
+    margin-top: 0;
+    margin-bottom: 55px;
+    @media screen and (max-width: $breakpoint) {
+      text-align: center;
+    }
+  }
+
+  &__photo-link {
+    overflow: hidden;
+    width: 577px;
+    height: 451px;
+    @media screen and (max-width: $breakpoint) {
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $small-breakpoint) {
+      height: 267px;
+    }
+  }
+
+  &__cans {
+    object-fit: cover;
+    transition: $hover-duration;
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: $breakpoint) {
+      margin: 0 auto;
+    }
+  }
+}

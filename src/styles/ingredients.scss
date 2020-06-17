@@ -1,0 +1,112 @@
+@import "utils";
+@import "variable";
+
+.ingredients {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr 20px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 50px auto 150px;
+  @media screen and (max-width: $big-breakpoint) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $breakpoint) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__aside {
+    left: -130px;
+    top: 125px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    @include article;
+    margin: 50px 0 0;
+
+    @media screen and (max-width: $small-breakpoint) {
+      margin: -80px 0 0;
+      width: 16vw;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    justify-items: end;
+    transform: translateY(15px);
+    @media screen and (max-width: $small-breakpoint) {
+      transform: translateX(-20px);
+    }
+  }
+
+  &__vector {
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      overflow: hidden;
+    }
+    @media screen and (max-width: $breakpoint) {
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: $breakpoint) {
+      padding-right: 2vw;
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: $small-breakpoint) {
+      margin: 0 0 -61px;
+    }
+  }
+
+  &__list {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translate(-170px, 0);
+    width: 20vw;
+
+    @media screen and (max-width: $breakpoint-middle) {
+      transform: translate(-80px, 0);
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -95px;
+      background: $blackcolor;
+      width: 76px;
+      height: 1px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $blackcolor;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      right: -97px;
+      top: 10px;
+      @media screen and (max-width: $breakpoint) {
+        display: none;
+      }
+    }
+  }
+}

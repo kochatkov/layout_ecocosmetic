@@ -1,0 +1,18 @@
+@import "variable";
+
+.button {
+  background: $blackcolor;
+  width: 280px;
+  height: 60px;
+  border: 1px solid black;
+  color: $whitecolor;
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: $hover-duration;
+  cursor: pointer;
+  &:hover {
+    background: black;
+  }
+}

@@ -1,7 +1,49 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "menu";
+@import "nav";
+@import "variable";
+@import "info";
+@import "more-info";
+@import "section";
+@import "button";
+@import "brand";
+@import "shop";
+@import "link";
+@import "creators";
+@import "aside";
+@import "ingredients";
+@import "natural";
+@import "contact";
+@import "footer";
+@import "almond";
+@import "shipping";
+
+html {
+  font-family: avenir, sans-serif;
+}
 
 body {
-  background: $c-gray;
+  background: #e4dfd3;
+}
+
+body,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 150%;
+  color: $blackcolor;
+}
+
+a {
+  outline: none;
 }

@@ -1,0 +1,24 @@
+@import "variable";
+
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: $greencolor;
+  text-transform: uppercase;
+  transition: $hover-duration;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -3px;
+    background: rgba(52, 79, 16, 0.5);
+    height: 1px;
+    width: 100px;
+  }
+  &:hover {
+    color: rgba(52, 79, 16, 0.5);
+  }
+}
