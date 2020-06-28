@@ -24,7 +24,8 @@
     background-position: center;
     background-size: cover;
     width: 20px;
-    height: 13px; }
+    height: 13px;
+    cursor: pointer; }
     @media screen and (min-width: 865px) {
       .header__menu {
         display: none; } }

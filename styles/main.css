@@ -34,7 +34,8 @@ h1 {
     background-position: center;
     background-size: cover;
     width: 20px;
-    height: 13px; }
+    height: 13px;
+    cursor: pointer; }
     @media screen and (min-width: 865px) {
       .header__menu {
         display: none; } }
@@ -113,7 +114,8 @@ h1 {
     font-size: 18px;
     position: relative;
     top: 20px;
-    left: 25px; }
+    left: 25px;
+    cursor: pointer; }
   .menu__stick {
     position: relative; }
   .menu__underline {
